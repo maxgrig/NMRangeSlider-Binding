@@ -36,9 +36,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Resources\NMRangeSliderResources.bundle\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="libNMRangeSliderUniversal.linkwith.cs">
+      <DependentUpon>libNMRangeSliderUniversal.a</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
@@ -47,4 +51,24 @@
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="libNMRangeSliderUniversal.a" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Info.plist" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-default-handle-highlighted.tiff" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-default-handle.tiff" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-default-track.tiff" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-default-trackBackground.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-default-trackCrossedOver.tiff" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-default7-handle.tiff" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-default7-track.tiff" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-default7-trackBackground.tiff" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-default7-trackCrossedOver.tiff" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-default_trackBackground%402x.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-metal-handle-highlighted.tiff" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-metal-handle.tiff" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-metal-track.tiff" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-metal-trackBackground.tiff" />
+  </ItemGroup>
 </Project>

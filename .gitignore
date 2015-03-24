@@ -43,7 +43,7 @@ _ReSharper*/
 #[Bb]uild/
 
 #Xcode
-xcuserdata/
+xcuserdata*
 
 # Office Temp Files
 ~$*

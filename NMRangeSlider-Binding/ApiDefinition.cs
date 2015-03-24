@@ -1,67 +1,137 @@
-﻿using System;
-
-using UIKit;
+﻿using CoreGraphics;
 using Foundation;
 using ObjCRuntime;
-using CoreGraphics;
+using UIKit;
 
 namespace NMRangeSliderBinding
 {
-	// The first step to creating a binding is to add your native library ("libNativeLibrary.a")
-	// to the project by right-clicking (or Control-clicking) the folder containing this source
-	// file and clicking "Add files..." and then simply select the native library (or libraries)
-	// that you want to bind.
-	//
-	// When you do that, you'll notice that MonoDevelop generates a code-behind file for each
-	// native library which will contain a [LinkWith] attribute. MonoDevelop auto-detects the
-	// architectures that the native library supports and fills in that information for you,
-	// however, it cannot auto-detect any Frameworks or other system libraries that the
-	// native library may depend on, so you'll need to fill in that information yourself.
-	//
-	// Once you've done that, you're ready to move on to binding the API...
-	//
-	//
-	// Here is where you'd define your API definition for the native Objective-C library.
-	//
-	// For example, to bind the following Objective-C class:
-	//
-	//     @interface Widget : NSObject {
-	//     }
-	//
-	// The C# binding would look like this:
-	//
-	//     [BaseType (typeof (NSObject))]
-	//     interface Widget {
-	//     }
-	//
-	// To bind Objective-C properties, such as:
-	//
-	//     @property (nonatomic, readwrite, assign) CGPoint center;
-	//
-	// You would add a property definition in the C# interface like so:
-	//
-	//     [Export ("center")]
-	//     CGPoint Center { get; set; }
-	//
-	// To bind an Objective-C method, such as:
-	//
-	//     -(void) doSomething:(NSObject *)object atIndex:(NSInteger)index;
-	//
-	// You would add a method definition to the C# interface like so:
-	//
-	//     [Export ("doSomething:atIndex:")]
-	//     void DoSomething (NSObject object, int index);
-	//
-	// Objective-C "constructors" such as:
-	//
-	//     -(id)initWithElmo:(ElmoMuppet *)elmo;
-	//
-	// Can be bound as:
-	//
-	//     [Export ("initWithElmo:")]
-	//     IntPtr Constructor (ElmoMuppet elmo);
-	//
-	// For more information, see http://developer.xamarin.com/guides/ios/advanced_topics/binding_objective-c/
-	//
-}
+	// @interface NMRangeSlider : UIControl
+	[BaseType (typeof(UIControl))]
+	interface NMRangeSlider
+	{
+		// @property (assign, nonatomic) float minimumValue;
+		[Export ("minimumValue")]
+		float MinimumValue { get; set; }
 
+		// @property (assign, nonatomic) float maximumValue;
+		[Export ("maximumValue")]
+		float MaximumValue { get; set; }
+
+		// @property (assign, nonatomic) float minimumRange;
+		[Export ("minimumRange")]
+		float MinimumRange { get; set; }
+
+		// @property (assign, nonatomic) float stepValue;
+		[Export ("stepValue")]
+		float StepValue { get; set; }
+
+		// @property (assign, nonatomic) BOOL stepValueContinuously;
+		[Export ("stepValueContinuously")]
+		bool StepValueContinuously { get; set; }
+
+		// @property (assign, nonatomic) BOOL continuous;
+		[Export ("continuous")]
+		bool Continuous { get; set; }
+
+		// @property (assign, nonatomic) float lowerValue;
+		[Export ("lowerValue")]
+		float LowerValue { get; set; }
+
+		// @property (assign, nonatomic) float upperValue;
+		[Export ("upperValue")]
+		float UpperValue { get; set; }
+
+		// @property (readonly, nonatomic) CGPoint lowerCenter;
+		[Export ("lowerCenter")]
+		CGPoint LowerCenter { get; }
+
+		// @property (readonly, nonatomic) CGPoint upperCenter;
+		[Export ("upperCenter")]
+		CGPoint UpperCenter { get; }
+
+		// @property (assign, nonatomic) float lowerMaximumValue;
+		[Export ("lowerMaximumValue")]
+		float LowerMaximumValue { get; set; }
+
+		// @property (assign, nonatomic) float upperMinimumValue;
+		[Export ("upperMinimumValue")]
+		float UpperMinimumValue { get; set; }
+
+		// @property (assign, nonatomic) UIEdgeInsets lowerTouchEdgeInsets;
+		[Export ("lowerTouchEdgeInsets", ArgumentSemantic.Assign)]
+		UIEdgeInsets LowerTouchEdgeInsets { get; set; }
+
+		// @property (assign, nonatomic) UIEdgeInsets upperTouchEdgeInsets;
+		[Export ("upperTouchEdgeInsets", ArgumentSemantic.Assign)]
+		UIEdgeInsets UpperTouchEdgeInsets { get; set; }
+
+		// @property (assign, nonatomic) BOOL lowerHandleHidden;
+		[Export ("lowerHandleHidden")]
+		bool LowerHandleHidden { get; set; }
+
+		// @property (assign, nonatomic) BOOL upperHandleHidden;
+		[Export ("upperHandleHidden")]
+		bool UpperHandleHidden { get; set; }
+
+		// @property (assign, nonatomic) float lowerHandleHiddenWidth;
+		[Export ("lowerHandleHiddenWidth")]
+		float LowerHandleHiddenWidth { get; set; }
+
+		// @property (assign, nonatomic) float upperHandleHiddenWidth;
+		[Export ("upperHandleHiddenWidth")]
+		float UpperHandleHiddenWidth { get; set; }
+
+		// @property (retain, nonatomic) UIImage * lowerHandleImageNormal;
+		[Export ("lowerHandleImageNormal", ArgumentSemantic.Retain)]
+		UIImage LowerHandleImageNormal { get; set; }
+
+		// @property (retain, nonatomic) UIImage * lowerHandleImageHighlighted;
+		[Export ("lowerHandleImageHighlighted", ArgumentSemantic.Retain)]
+		UIImage LowerHandleImageHighlighted { get; set; }
+
+		// @property (retain, nonatomic) UIImage * upperHandleImageNormal;
+		[Export ("upperHandleImageNormal", ArgumentSemantic.Retain)]
+		UIImage UpperHandleImageNormal { get; set; }
+
+		// @property (retain, nonatomic) UIImage * upperHandleImageHighlighted;
+		[Export ("upperHandleImageHighlighted", ArgumentSemantic.Retain)]
+		UIImage UpperHandleImageHighlighted { get; set; }
+
+		// @property (retain, nonatomic) UIImage * trackImage;
+		[Export ("trackImage", ArgumentSemantic.Retain)]
+		UIImage TrackImage { get; set; }
+
+		// @property (retain, nonatomic) UIImage * trackCrossedOverImage;
+		[Export ("trackCrossedOverImage", ArgumentSemantic.Retain)]
+		UIImage TrackCrossedOverImage { get; set; }
+
+		// @property (retain, nonatomic) UIImage * trackBackgroundImage;
+		[Export ("trackBackgroundImage", ArgumentSemantic.Retain)]
+		UIImage TrackBackgroundImage { get; set; }
+
+		// @property (retain, nonatomic) UIImageView * lowerHandle;
+		[Export ("lowerHandle", ArgumentSemantic.Retain)]
+		UIImageView LowerHandle { get; set; }
+
+		// @property (retain, nonatomic) UIImageView * upperHandle;
+		[Export ("upperHandle", ArgumentSemantic.Retain)]
+		UIImageView UpperHandle { get; set; }
+
+		// -(void)addSubviews;
+		[Export ("addSubviews")]
+		void AddSubviews ();
+
+		// -(void)setLowerValue:(float)lowerValue animated:(BOOL)animated;
+		[Export ("setLowerValue:animated:")]
+		void SetLowerValue (float lowerValue, bool animated);
+
+		// -(void)setUpperValue:(float)upperValue animated:(BOOL)animated;
+		[Export ("setUpperValue:animated:")]
+		void SetUpperValue (float upperValue, bool animated);
+
+		// -(void)setLowerValue:(float)lowerValue upperValue:(float)upperValue animated:(BOOL)animated;
+		[Export ("setLowerValue:upperValue:animated:")]
+		void SetLowerValue (float lowerValue, float upperValue, bool animated);
+	}
+
+}
