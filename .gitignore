@@ -40,7 +40,10 @@ _ReSharper*/
 [Tt]est-[Rr]esults/
 
 #Project files
-[Bb]uild/
+#[Bb]uild/
+
+#Xcode
+xcuserdata/
 
 # Office Temp Files
 ~$*
