@@ -55,20 +55,32 @@
     <ObjcBindingNativeLibrary Include="libNMRangeSliderUniversal.a" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Info.plist" />
-    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-default-handle-highlighted.tiff" />
-    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-default-handle.tiff" />
-    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-default-track.tiff" />
-    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-default-trackBackground.png" />
-    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-default-trackCrossedOver.tiff" />
-    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-default7-handle.tiff" />
-    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-default7-track.tiff" />
-    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-default7-trackBackground.tiff" />
-    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-default7-trackCrossedOver.tiff" />
-    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-default_trackBackground%402x.png" />
-    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-metal-handle-highlighted.tiff" />
-    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-metal-handle.tiff" />
-    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-metal-track.tiff" />
-    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Contents\Resources\slider-metal-trackBackground.tiff" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\Info.plist" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-default-handle-highlighted.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-default-handle-highlighted%402x.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-default-handle.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-default-handle%402x.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-default-track.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-default-track%402x.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-default-trackBackground.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-default-trackCrossedOver.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-default-trackCrossedOver%402x.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-default7-handle.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-default7-handle%402x.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-default7-track.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-default7-track%402x.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-default7-trackBackground.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-default7-trackBackground%402x.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-default7-trackCrossedOver.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-default7-trackCrossedOver%402x.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-default_trackBackground%402x.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-metal-handle-highlighted.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-metal-handle-highlighted%402x.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-metal-handle.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-metal-handle%402x.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-metal-track.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-metal-track%402x.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-metal-trackBackground.png" />
+    <BundleResource Include="Resources\NMRangeSliderResources.bundle\slider-metal-trackBackground%402x.png" />
   </ItemGroup>
 </Project>
